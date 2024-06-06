@@ -1,8 +1,8 @@
 A simple rock, paper, scissors type game built in python to be played via terminal. This game was created for the purpose of reaquanting myself with python.
 
-[] Introduce game
-[] Ask user for choice
-[] Generate computer choice
+[X] Introduce game
+[X] Ask user for choice
+[X] Generate computer choice
 [] Show choices on screen
 [] Compare choices
 [] Add rounds for game
