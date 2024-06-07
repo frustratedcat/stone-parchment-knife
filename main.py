@@ -5,11 +5,6 @@ def main():
   print(greeting_name)
   print(f'Hello, {greeting_name.title()}!\nThe rules of the game are simple, Stone beats Knife, Knife beats Parchment, Parchment beats Stone!')
 
-  player_choice = get_player_choice()
-  computer_choice = get_computer_choice()
-  print(player_choice, computer_choice)
-
-
 def greet_player():
   player_name = input('Welcome to Stone, Parchment, Knife!\nWhat should I call you?\n> ')
   return player_name
@@ -38,6 +33,33 @@ def get_computer_choice():
     computer_choice = 'Knife'
 
   return computer_choice
+
+def compare_player_computer_choices():
+  result = ''
+  player_choice = get_player_choice()
+  computer_choice = get_computer_choice()
+  print(player_choice, computer_choice)
+
+  if player_choice.title() == 'Stone' and computer_choice.title() == 'Stone':
+    result = 'Draw'
+  elif player_choice.title() == 'Stone' and computer_choice.title() == 'Parchment':
+    result = 'Computer Win'
+  elif player_choice.title() == 'Stone' and computer_choice.title() == 'Knife':
+    result = 'Player Win'
+  elif player_choice.title() == 'Parchment' and computer_choice.title() == 'Stone':
+    result = 'Player Win'
+  elif player_choice.title() == 'Parchment' and computer_choice.title() == 'Parchment':
+    result = 'Draw'
+  elif player_choice.title() == 'Parchment' and computer_choice.title() == 'Knife':
+    result = 'Computer Win'
+  elif player_choice.title() == 'Knife' and computer_choice.title() == 'Stone':
+    result = 'Computer Win'
+  elif player_choice.title() == 'Knife' and computer_choice.title() == 'Parchment':
+    result = 'Player Win'
+  elif player_choice.title() == 'Knife' and computer_choice.title() == 'Knife':
+    result = 'Draw'
+
+  return result
 
 if __name__ == '__main__':
   main()

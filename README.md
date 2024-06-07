@@ -3,8 +3,8 @@ A simple rock, paper, scissors type game built in python to be played via termin
 [X] Introduce game
 [X] Ask user for choice
 [X] Generate computer choice
-[] Show choices on screen
-[] Compare choices
+[X] Show choices on screen
+[X] Compare choices
 [] Add rounds for game
 [] Show current round on screen
 [] Add scoring for each round
