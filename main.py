@@ -1,23 +1,29 @@
 import random
+import os
 
 def main():
+  clear_screen()
   play_game = True
 
   greeting_name = greet_player()
-  print(greeting_name)
-  print(f'Hello, {greeting_name.title()}!\nThe rules of the game are simple, Stone beats Knife, Knife beats Parchment, Parchment beats Stone!')
+  clear_screen()
+  print(f'Hello, {greeting_name.title()}!\nThe rules of the game are simple, Stone beats Knife, Knife beats Parchment, Parchment beats Stone!\n')
 
   while play_game == True:
 
     result = compare_player_computer_choices()
     print(result)
 
-    play_again = input('Would you like to play again? Type "Yes" or "No"\n> ')
+    play_again = input('\nWould you like to play again? Type "Yes" or "No"\n> ')
+    clear_screen()
     if play_again.title() == 'Yes':
       play_game = True
     elif play_again.title() == 'No':
       play_game = False
       print('See you next time!')
+
+def clear_screen():
+  os.system('cls' if os.name == 'nt' else 'clear')
 
 def greet_player():
   player_name = input('Welcome to Stone, Parchment, Knife!\nWhat should I call you?\n> ')
@@ -52,7 +58,8 @@ def compare_player_computer_choices():
   result = ''
   player_choice = get_player_choice()
   computer_choice = get_computer_choice()
-  print(f'You chose {player_choice}\nComputer chose {computer_choice}')
+  clear_screen()
+  print(f'You chose {player_choice}\n\nComputer chose {computer_choice}\n')
 
   if player_choice == 'Stone' and computer_choice == 'Stone':
     result = 'Draw!'
