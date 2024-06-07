@@ -1,11 +1,8 @@
 import random
 
 def greet_player():
-  print('Welcome to Stone, Parchment, Knife!')
-
-  player_name = input('What should I call you?\n> ')
-
-  print(f'Hello, {player_name.title()}! The rules of the game are simple, Stone beats Knife, Knife beats Parchment, Parchment beats Stone!')
+  player_name = input('Welcome to Stone, Parchment, Knife!\nWhat should I call you?\n> ')
+  return f'Hello, {player_name.title()}! The rules of the game are simple, Stone beats Knife, Knife beats Parchment, Parchment beats Stone!'
 
 def get_player_choice():
   make_choice = True
@@ -31,4 +28,4 @@ def get_computer_choice():
 
   return computer_choice
 
-print(get_player_choice(), get_computer_choice())
+print(greet_player(), get_player_choice(), get_computer_choice())
