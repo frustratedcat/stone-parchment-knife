@@ -1,4 +1,4 @@
-A simple rock, paper, scissors type game built in python to be played via terminal. This game was created for the purpose of reaquanting myself with python.
+A simple rock, paper, scissors type game built in python to be played via terminal. This game was created for the purpose of reacquainting myself with python.
 
 [X] Introduce game
 [X] Ask user for choice
